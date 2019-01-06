@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import Main from './components/Main';
-import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 
 const App = () => {
   return (
-    <div className='d-flex flex-column h-100 index-bg'>
+    <div className='row index-bg'>
+      <NavBar />
       <Main />
-      <Footer />
     </div>
   );
 };
