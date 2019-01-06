@@ -15,8 +15,8 @@ const NavBar = ({ onMenuItemSelect }) => {
 
   return (
     <nav className='col-md-2 d-md-block sidebar'>
-      <div class='sidebar-sticky'>
-        <ul class='nav flex-column'>{renderedList}</ul>
+      <div className='sidebar-sticky'>
+        <ul className='nav flex-column'>{renderedList}</ul>
       </div>
     </nav>
   );

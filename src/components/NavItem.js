@@ -2,9 +2,9 @@ import React from 'react';
 
 const NavItem = ({ menuItem, onMenuItemSelect }) => {
   return (
-    <li class='nav-item'>
+    <li className='nav-item'>
       <button
-        class='nav-link'
+        className='nav-link'
         href='#'
         onClick={() => onMenuItemSelect(menuItem)}
       >
