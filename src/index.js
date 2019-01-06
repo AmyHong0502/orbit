@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Apod from './components/Apod';
-import NeoWs from './components/NeoWs';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div>
-      <Apod />
-      <NeoWs />
-      Hello world!
+    <div className='d-flex flex-column h-100'>
+      <Main />
+      <Footer />
     </div>
   );
 };
