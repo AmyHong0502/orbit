@@ -3,7 +3,9 @@ import nasa from '../apis/nasa';
 
 class NeoWs extends React.Component {
   state = {
-    data: null
+    elementCount: null,
+    links: null,
+    nearEarthObjects: null
   };
 
   onButtonClick = async () => {
@@ -17,12 +19,18 @@ class NeoWs extends React.Component {
     const endDateParam = `${endDate.getFullYear()}-${endDate.getMonth() +
       1}-${endDate.getDate()}`;
 
-    this.state.data = await nasa.get('/neo/rest/v1/feed', {
+    const response = await nasa.get('/neo/rest/v1/feed', {
       params: {
         start_date: startDateParam,
         end_date: endDateParam,
         api_key: 'DEMO_KEY'
       }
+    });
+
+    this.setState({
+      elementCount: response.data.element_count,
+      links: response.data.links,
+      nearEarthObjects: response.data.near_earch_objects
     });
   };
 

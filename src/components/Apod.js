@@ -3,17 +3,32 @@ import nasa from '../apis/nasa';
 
 class Apod extends React.Component {
   state = {
-    data: null
+    date: null,
+    explanation: null,
+    hdurl: null,
+    media_type: null,
+    service_version: null,
+    title: null,
+    url: null
   };
 
   onButtonClick = async () => {
-    this.state.data = await nasa.get('/planetary/apod', {
+    const response = await nasa.get('/planetary/apod', {
       params: {
         api_key: 'DEMO_KEY'
       }
     });
+    const data = response.data;
 
-    console.log(this.state.data);
+    this.setState({
+      date: data.date,
+      explanation: data.explanation,
+      hdurl: data.hdurl,
+      media_type: data.media_type,
+      service_version: data.service_version,
+      title: data.title,
+      url: data.url
+    });
   };
 
   render() {
