@@ -1,5 +1,5 @@
 import React from 'react';
-import nasa from '../apis/nasa';
+import nasa from './nasa';
 
 class Apod extends React.Component {
   state = {
