@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
-import Main from './components/Main';
-import NavBar from './components/NavBar';
+import Layout from './components/layout/Root';
 
 class App extends Component {
-  state = {
-    selectedMenu: null
-  };
-
-  onMenuItemSelect = menuItem => {
-    this.setState({
-      selectedMenu: menuItem
-    });
-  };
-
   render() {
     return (
-      <div className='row index-bg'>
-        <NavBar onMenuItemSelect={this.onMenuItemSelect} />
-        <Main selected={this.state.selectedMenu} />
-      </div>
+      <BrowserRouter>
+        <Route path='/' component={Layout} />
+      </BrowserRouter>
     );
   }
 }
