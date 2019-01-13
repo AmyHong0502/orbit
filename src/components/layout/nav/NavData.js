@@ -2,19 +2,32 @@ export default [
   {
     id: 'Home',
     name: 'Home',
-    description: 'Lorem Ipsum dolor sit amet',
+    description: 'Home Page',
     urlPath: ''
   },
   {
     id: 'Apod',
     name: 'APOD',
-    description: 'Lorem Ipsum',
+    description: 'Astronomy Picture of the Day',
     urlPath: 'apod'
   },
   {
     id: 'NeoWs',
     name: 'NeoWs',
-    description: 'Dolor Sit Amet',
+    description: 'Near Earth Object Web Service',
     urlPath: 'neows'
+  },
+  {
+    id: 'Donki',
+    name: 'DONKI',
+    description:
+      'Space Weather Database Of Notifications, Knowledge, Information',
+    urlPath: 'donki'
+  },
+  {
+    id: 'Epic',
+    name: 'EPIC',
+    description: 'Earth Polychromatic Imaging Camera',
+    urlPath: 'epic'
   }
 ];
