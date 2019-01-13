@@ -1,3 +1,5 @@
+import { API_KEY } from '../../apis/credentials.json';
+
 import React, { Component } from 'react';
 
 import nasa from '../../apis/nasa';
@@ -28,7 +30,7 @@ class NeoWs extends Component {
       params: {
         start_date: startDateParam,
         end_date: endDateParam,
-        api_key: 'DEMO_KEY'
+        api_key: API_KEY
       }
     });
 

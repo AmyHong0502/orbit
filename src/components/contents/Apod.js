@@ -1,3 +1,5 @@
+import { API_KEY } from '../../apis/credentials.json';
+
 import React, { Component } from 'react';
 
 import nasa from '../../apis/nasa';
@@ -20,7 +22,7 @@ class Apod extends Component {
   loadApiData = async () => {
     const response = await nasa.get('/planetary/apod', {
       params: {
-        api_key: 'DEMO_KEY'
+        api_key: API_KEY
       }
     });
     const data = response.data;
@@ -47,7 +49,7 @@ class Apod extends Component {
 
         <span className='text-muted float-right'>{this.state.date}</span>
         <h3>{this.state.title}</h3>
-        <img src={this.state.hdurl} alt={this.state.title} className="w-100"/>
+        <img src={this.state.hdurl} alt={this.state.title} className='w-100' />
         <div>
           <p>{this.state.explanation}</p>
           <p>{this.state.media_type}</p>
