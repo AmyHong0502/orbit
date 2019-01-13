@@ -5,7 +5,7 @@ const NavItem = ({ menuItem, onMenuItemSelect }) => {
   return (
     <li className='nav-item' onClick={onMenuItemSelect}>
       <div>
-        <Link to={menuItem.urlPath} exact className='nav-link'>
+        <Link to={menuItem.urlPath} className='nav-link'>
           {menuItem.name}
         </Link>
       </div>
