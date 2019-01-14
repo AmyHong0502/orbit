@@ -53,8 +53,8 @@ class Apod extends Component {
           <p className='font-weight-light text-justify mb-5'>
             {this.state.explanation}
           </p>
-          <ul class='list-inline float-right'>
-            <li class='list-inline-item font-weight-light text-white-50'>
+          <ul className='list-inline float-right'>
+            <li className='list-inline-item font-weight-light text-white-50'>
               <span className='font-weight-bold text-white-50 pr-1'>
                 Media type:
               </span>
@@ -63,7 +63,7 @@ class Apod extends Component {
             <li className='list-inline-item font-weight-light text-white-50'>
               |
             </li>
-            <li class='list-inline-item font-weight-light text-white-50'>
+            <li className='list-inline-item font-weight-light text-white-50'>
               <span className='font-weight-bold text-white-50 pr-1'>
                 Service version:
               </span>
