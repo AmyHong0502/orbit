@@ -65,8 +65,8 @@ class Cme extends Component {
 
     return (
       <div className='row'>
-        <div className='col-2 font-weight-bold'>{name}</div>
-        <div className='col-10 font-weight-light'>{contents}</div>
+        <div className='col-3 font-weight-bold'>{name}</div>
+        <div className='col-9 font-weight-light'>{contents.toString()}</div>
       </div>
     );
   };
@@ -90,10 +90,12 @@ class Cme extends Component {
     });
 
   render() {
-    if (this.state.data.length === 0) {
-      return <div>Loading...</div>;
-    }
-    return <div>{this.renderList()}</div>;
+    return (
+      <div>
+        <h1 className='display-4'>Coronal Mass Ejection</h1>
+        {this.renderList()}
+      </div>
+    );
   }
 }
 
