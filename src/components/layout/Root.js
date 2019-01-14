@@ -7,7 +7,11 @@ class Root extends Component {
   render() {
     return (
       <div className='row index-bg'>
-        <NavBar />
+        <NavBar
+          match={this.props.match}
+          location={this.props.location}
+          history={this.props.history}
+        />
         <Main />
       </div>
     );

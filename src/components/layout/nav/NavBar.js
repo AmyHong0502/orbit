@@ -2,13 +2,14 @@ import React from 'react';
 import NavItem from './NavItem';
 import NavData from './NavData';
 
-const NavBar = ({ onMenuItemSelect }) => {
+const NavBar = ({ onMenuItemSelect, match }) => {
   const renderedList = NavData.map(menuItem => {
     return (
       <NavItem
         key={menuItem.id}
         onMenuItemSelect={onMenuItemSelect}
         menuItem={menuItem}
+        match={match}
       />
     );
   });
