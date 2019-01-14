@@ -4,6 +4,12 @@ import { Route } from 'react-router-dom';
 import Home from '../../contents/Home';
 import Apod from '../../contents/Apod';
 import NeoWs from '../../contents/NeoWs';
+import Donki from '../../contents/Donki';
+import Epic from '../../contents/Epic';
+import Eonet from '../../contents/Eonet';
+import Earth from '../../contents/Earth';
+import ExoplanetArchive from '../../contents/ExoplanetArchive';
+import GeneLabSearch from '../../contents/GeneLabSearch';
 
 class Main extends React.Component {
   render() {
@@ -13,7 +19,12 @@ class Main extends React.Component {
           <Route path='/' exact component={Home} />
           <Route path='/apod' exact component={Apod} />
           <Route path='/neows' exact component={NeoWs} />
-          {this.props.children}
+          <Route path='/donki' exact component={Donki} />
+          <Route path='/epic' exact component={Epic} />
+          <Route path='/eonet' exact component={Eonet} />
+          <Route path='/earth' exact component={Earth} />
+          <Route path='/exoplanet-archive' exact component={ExoplanetArchive} />
+          <Route path='/gene-lab' exact component={GeneLabSearch} />
         </div>
       </main>
     );
