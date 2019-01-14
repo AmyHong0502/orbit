@@ -1,8 +1,6 @@
-import { API_KEY } from '../../apis/credentials.json';
-
 import React, { Component } from 'react';
-
 import nasa from '../../apis/nasa';
+import { API_KEY } from '../../apis/credentials.json';
 
 class Apod extends Component {
   state = {
@@ -45,15 +43,33 @@ class Apod extends Component {
   render() {
     return (
       <div>
-        <h1>Astronomy Picture of the Day</h1>
-
-        <span className='text-muted float-right'>{this.state.date}</span>
-        <h3>{this.state.title}</h3>
+        <h1 className='display-4 mb-1'>Astronomy Picture of the Day</h1>
+        <div className='h4 lead mb-4'>
+          {this.state.title}
+          <span className='text-white-50 lead pl-3'>{this.state.date}</span>
+        </div>
         <img src={this.state.hdurl} alt={this.state.title} className='w-100' />
-        <div>
-          <p>{this.state.explanation}</p>
-          <p>{this.state.media_type}</p>
-          <p>{this.state.service_version}</p>
+        <div className='mt-5'>
+          <p className='font-weight-light text-justify mb-5'>
+            {this.state.explanation}
+          </p>
+          <ul class='list-inline float-right'>
+            <li class='list-inline-item font-weight-light text-white-50'>
+              <span className='font-weight-bold text-white-50 pr-1'>
+                Media type:
+              </span>
+              {this.state.media_type}
+            </li>
+            <li className='list-inline-item font-weight-light text-white-50'>
+              |
+            </li>
+            <li class='list-inline-item font-weight-light text-white-50'>
+              <span className='font-weight-bold text-white-50 pr-1'>
+                Service version:
+              </span>
+              {this.state.service_version}
+            </li>
+          </ul>
         </div>
       </div>
     );
