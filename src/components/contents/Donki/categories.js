@@ -21,55 +21,55 @@ export default [
   {
     id: 'cme',
     path: '/cme',
-    name: 'CME',
+    name: 'Coronal Mass Ejection',
     component: Cme
   },
   {
     id: 'cme-analysis',
     path: '/cme-analysis',
-    name: 'CME Analysis',
+    name: 'Coronal Mass Ejection Analysis',
     component: CmeAnalysis
   },
   {
     id: 'gst',
     path: '/gst',
-    name: 'GST',
+    name: 'Geomagnetic Storm',
     component: Gst
   },
   {
     id: 'ips',
     path: '/ips',
-    name: 'IPS',
+    name: 'Interplanetary Shock',
     component: Ips
   },
   {
     id: 'flr',
     path: '/flr',
-    name: 'FLR',
+    name: 'Solar Flare',
     component: Flr
   },
   {
     id: 'sep',
     path: '/sep',
-    name: 'SEP',
+    name: 'Solar Energetic Particle',
     component: Sep
   },
   {
     id: 'mpc',
     path: '/mpc',
-    name: 'MPC',
+    name: 'Magnetopause Crossing',
     component: Mpc
   },
   {
     id: 'rbe',
     path: '/rbe',
-    name: 'RBE',
+    name: 'Radiation Belt Enhancement',
     component: Rbe
   },
   {
     id: 'hss',
     path: '/hss',
-    name: 'HSS',
+    name: 'Hight Speed Stream',
     component: Hss
   },
   {
