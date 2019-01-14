@@ -58,20 +58,33 @@ class Cme extends Component {
     });
   };
 
+  rowItem = (name, contents) => {
+    if (!contents) {
+      return null;
+    }
+
+    return (
+      <div className='row'>
+        <div className='col-2 font-weight-bold'>{name}</div>
+        <div className='col-10 font-weight-light'>{contents}</div>
+      </div>
+    );
+  };
+
   renderList = () =>
     this.state.data.map(item => {
       return (
-        <div key={item.activityID}>
-          <p>activeRegionNum: {item.activeRegionNum}</p>
-          <p>activityID: {item.activityID}</p>
-          <p>catalog: {item.catalog}</p>
+        <div key={item.activityID} className='mb-5 mt-5 container'>
+          {this.rowItem('activeRegionNum', item.activeRegionNum)}
+          {this.rowItem('activityID', item.activityID)}
+          {this.rowItem('catalog', item.catalog)}
           {/* <p>cmeAnalyses: {item.cmeAnalyses}</p> */}
           {/* <p>instruments: {item.instruments}</p> */}
-          <p>displayName: {item.displayName}</p>
+          {this.rowItem('displayName', item.displayName)}
           {/* <p>linkedEvents: {item.linkedEvents}</p> */}
-          <p>note: {item.note}</p>
-          <p>sourceLocation: {item.sourceLocation}</p>
-          <p>startTime: {item.startTime}</p>
+          {this.rowItem('note', item.note)}
+          {this.rowItem('sourceLocation', item.sourceLocation)}
+          {this.rowItem('startTime', item.startTime)}
         </div>
       );
     });

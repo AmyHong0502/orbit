@@ -4,7 +4,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        Space Weather Database Of Notifications, Knowledge, Information
+        <h1 className='display-4 mb-1'>
+          Space Weather Database Of Notifications, Knowledge, Information
+        </h1>
         <ul>
           <li>CME</li>
           <li>CME Analysis</li>

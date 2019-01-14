@@ -6,16 +6,20 @@ import categories from './Donki/categories';
 class Donki extends Component {
   renderedCategories = categories.map(item => {
     return (
-      <button type='button' className='btn btn-secondary' key={item.id}>
-        <Link to={`${this.props.match.url}${item.path}`}>{item.name}</Link>
-      </button>
+      <Link
+        to={`${this.props.match.url}${item.path}`}
+        key={item.id}
+        className='rounded-pill border border-light m-1 p-2 pl-3 pr-3 no-wrap'
+      >
+        {item.name}
+      </Link>
     );
   });
 
   renderCategoryGroup() {
     return (
-      <div>
-        <div className='btn-group' role='group'>
+      <div className='overflow-auto'>
+        <div className='btn-group mb-3' role='group'>
           {this.renderedCategories}
         </div>
       </div>
@@ -35,7 +39,7 @@ class Donki extends Component {
 
   render() {
     return (
-      <div>
+      <div className='overflow-auto'>
         {this.renderCategoryGroup()}
         {this.routes}
       </div>
