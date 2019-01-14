@@ -1,7 +1,6 @@
 import Home from './Home';
 import Cme from './Cme';
 import CmeAnalysis from './CmeAnalysis';
-import Gst from './Gst';
 import Ips from './Ips';
 import Flr from './Flr';
 import Sep from './Sep';
@@ -29,12 +28,6 @@ export default [
     path: '/cme-analysis',
     name: 'Coronal Mass Ejection Analysis',
     component: CmeAnalysis
-  },
-  {
-    id: 'gst',
-    path: '/gst',
-    name: 'Geomagnetic Storm',
-    component: Gst
   },
   {
     id: 'ips',
