@@ -1,5 +1,6 @@
 import { API_KEY } from '../../../apis/credentials';
 import React, { Component } from 'react';
+import RowItem from './RowItem';
 import nasa from '../../../apis/nasa';
 
 class Cme extends Component {
@@ -58,33 +59,20 @@ class Cme extends Component {
     });
   };
 
-  rowItem = (name, contents) => {
-    if (!contents) {
-      return null;
-    }
-
-    return (
-      <div className='row'>
-        <div className='col-3 font-weight-bold'>{name}</div>
-        <div className='col-9 font-weight-light'>{contents.toString()}</div>
-      </div>
-    );
-  };
-
   renderList = () =>
     this.state.data.map(item => {
       return (
         <div key={item.activityID} className='mb-5 mt-5 container'>
-          {this.rowItem('activeRegionNum', item.activeRegionNum)}
-          {this.rowItem('activityID', item.activityID)}
-          {this.rowItem('catalog', item.catalog)}
-          {/* <p>cmeAnalyses: {item.cmeAnalyses}</p> */}
-          {/* <p>instruments: {item.instruments}</p> */}
-          {this.rowItem('displayName', item.displayName)}
-          {/* <p>linkedEvents: {item.linkedEvents}</p> */}
-          {this.rowItem('note', item.note)}
-          {this.rowItem('sourceLocation', item.sourceLocation)}
-          {this.rowItem('startTime', item.startTime)}
+          <RowItem name={'activeRegionNum'} content={item.activeRegionNum} />
+          <RowItem name={'activityID'} content={item.activityID} />
+          <RowItem name={'catalog'} content={item.catalog} />
+          <RowItem name={'cmeAnalyses'} content={item.cmeAnalyses} />
+          <RowItem name={'instruments'} content={item.instruments} />
+          <RowItem name={'displayName'} content={item.displayName} />
+          <RowItem name={'linkedEvents'} content={item.linkedEvents} />
+          <RowItem name={'note'} content={item.note} />
+          <RowItem name={'sourceLocation'} content={item.sourceLocation} />
+          <RowItem name={'startTime'} content={item.startTime} />
         </div>
       );
     });

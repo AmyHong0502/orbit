@@ -1,5 +1,6 @@
 import { API_KEY } from '../../../apis/credentials';
 import React, { Component } from 'react';
+import RowItem from './RowItem';
 import nasa from '../../../apis/nasa';
 
 class CmeAnalysis extends Component {
@@ -36,33 +37,20 @@ class CmeAnalysis extends Component {
     });
   };
 
-  rowItem = (name, contents) => {
-    if (!contents) {
-      return null;
-    }
-
-    return (
-      <div className='row'>
-        <div className='col-3 font-weight-bold'>{name}</div>
-        <div className='col-9 font-weight-light'>{contents.toString()}</div>
-      </div>
-    );
-  };
-
   renderList = () =>
     this.state.data.map(item => {
       return (
         <div key={item.associatedCMEID} className='mb-5 mt-5 container'>
-          {this.rowItem('associatedCMEID', item.associatedCMEID)}
-          {this.rowItem('catalog', item.catalog)}
-          {this.rowItem('halfAngle', item.halfAngle)}
-          {this.rowItem('isMostAccurate', item.isMostAccurate)}
-          {this.rowItem('latitude', item.latitude)}
-          {this.rowItem('longitude', item.longitude)}
-          {this.rowItem('note', item.note)}
-          {this.rowItem('speed', item.speed)}
-          {this.rowItem('time21_5', item.time21_5)}
-          {this.rowItem('type', item.type)}
+          <RowItem name={'associatedCMEID'} content={item.associatedCMEID} />
+          <RowItem name={'catalog'} content={item.catalog} />
+          <RowItem name={'halfAngle'} content={item.halfAngle} />
+          <RowItem name={'isMostAccurate'} content={item.isMostAccurate} />
+          <RowItem name={'latitude'} content={item.latitude} />
+          <RowItem name={'longitude'} content={item.longitude} />
+          <RowItem name={'note'} content={item.note} />
+          <RowItem name={'speed'} content={item.speed} />
+          <RowItem name={'time21_5'} content={item.time21_5} />
+          <RowItem name={'type'} content={item.type} />
         </div>
       );
     });
