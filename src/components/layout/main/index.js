@@ -14,12 +14,12 @@ import GeneLabSearch from '../../contents/GeneLabSearch';
 class Main extends React.Component {
   render() {
     return (
-      <main role='main' className='col-md-9 ml-sm-auto col-lg-10 px-4 h-100'>
+      <main role='main' className='col-md-10 ml-sm-auto px-4 h-100'>
         <div className='d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3'>
           <Route path='/' exact component={Home} />
           <Route path='/apod' exact component={Apod} />
           <Route path='/neows' exact component={NeoWs} />
-          <Route path='/donki' exact component={Donki} />
+          <Route path='/donki' component={Donki} />
           <Route path='/epic' exact component={Epic} />
           <Route path='/eonet' exact component={Eonet} />
           <Route path='/earth' exact component={Earth} />
