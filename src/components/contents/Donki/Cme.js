@@ -58,8 +58,29 @@ class Cme extends Component {
     });
   };
 
+  renderList = () =>
+    this.state.data.map(item => {
+      return (
+        <div key={item.activityID}>
+          <p>activeRegionNum: {item.activeRegionNum}</p>
+          <p>activityID: {item.activityID}</p>
+          <p>catalog: {item.catalog}</p>
+          {/* <p>cmeAnalyses: {item.cmeAnalyses}</p> */}
+          {/* <p>instruments: {item.instruments}</p> */}
+          <p>displayName: {item.displayName}</p>
+          {/* <p>linkedEvents: {item.linkedEvents}</p> */}
+          <p>note: {item.note}</p>
+          <p>sourceLocation: {item.sourceLocation}</p>
+          <p>startTime: {item.startTime}</p>
+        </div>
+      );
+    });
+
   render() {
-    return <div>CME</div>;
+    if (this.state.data.length === 0) {
+      return <div>Loading...</div>;
+    }
+    return <div>{this.renderList()}</div>;
   }
 }
 
