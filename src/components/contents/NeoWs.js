@@ -39,18 +39,19 @@ class NeoWs extends Component {
       links: response.data.links,
       nearEarthObjects: response.data.near_earch_objects
     });
-
-    console.log(this.state);
   };
 
   render() {
     return (
       <div>
-        <p>{this.state.elementCount}</p>
-        <button>Prev week: {this.state.links.prev} </button>
-        <button>This week: {this.state.links.self}</button>
-        <button>Next week: {this.state.links.next}</button>
-        <p>{this.state.nearEarthObjects}</p>
+        <p>Element count: {this.state.elementCount}</p>
+        Prev week:
+        <button className='text-primary'>{this.state.links.prev} </button>
+        This week:
+        <button className='text-primary'>{this.state.links.self}</button>
+        Next week:
+        <button className='text-primary'>{this.state.links.next}</button>
+        <p className='text-info'>{this.state.nearEarthObjects}</p>
       </div>
     );
   }
