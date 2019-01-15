@@ -35,8 +35,6 @@ class Ips extends Component {
     this.setState({
       data: data
     });
-
-    console.log(this.state.data);
   };
 
   renderList = () =>
@@ -52,7 +50,12 @@ class Ips extends Component {
     });
 
   render() {
-    return this.renderList();
+    return (
+      <div>
+        <h1 className='display-4 mb-1'>Interplanetary Shock</h1>
+        {this.renderList()}
+      </div>
+    );
   }
 }
 
