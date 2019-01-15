@@ -2,10 +2,6 @@ import Home from './Home';
 import Cme from './Cme';
 import CmeAnalysis from './CmeAnalysis';
 import Ips from './Ips';
-import Flr from './Flr';
-import Sep from './Sep';
-import Mpc from './Mpc';
-import Rbe from './Rbe';
 import Hss from './Hss';
 import WsaEnlilSimulation from './WsaEnlilSimulation';
 import Notifications from './Notifications';
@@ -34,30 +30,6 @@ export default [
     path: '/ips',
     name: 'Interplanetary Shock',
     component: Ips
-  },
-  {
-    id: 'flr',
-    path: '/flr',
-    name: 'Solar Flare',
-    component: Flr
-  },
-  {
-    id: 'sep',
-    path: '/sep',
-    name: 'Solar Energetic Particle',
-    component: Sep
-  },
-  {
-    id: 'mpc',
-    path: '/mpc',
-    name: 'Magnetopause Crossing',
-    component: Mpc
-  },
-  {
-    id: 'rbe',
-    path: '/rbe',
-    name: 'Radiation Belt Enhancement',
-    component: Rbe
   },
   {
     id: 'hss',
