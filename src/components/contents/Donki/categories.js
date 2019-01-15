@@ -3,7 +3,6 @@ import Cme from './Cme';
 import CmeAnalysis from './CmeAnalysis';
 import Ips from './Ips';
 import Hss from './Hss';
-import WsaEnlilSimulation from './WsaEnlilSimulation';
 import Notifications from './Notifications';
 
 export default [
@@ -36,12 +35,6 @@ export default [
     path: '/hss',
     name: 'Hight Speed Stream',
     component: Hss
-  },
-  {
-    id: 'wsaEnlilSimulation',
-    path: '/wsa-enlilsimulation',
-    name: 'WSA+EnlilSimulation',
-    component: WsaEnlilSimulation
   },
   {
     id: 'notifications',
