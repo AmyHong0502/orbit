@@ -1,8 +1,7 @@
 import { API_KEY } from '../../apis/credentials.json';
-
 import React, { Component } from 'react';
-
 import nasa from '../../apis/nasa';
+import dateParam from '../../apis/dateParam';
 
 class NeoWs extends Component {
   state = {
@@ -18,13 +17,8 @@ class NeoWs extends Component {
   loadNeoWsData = async () => {
     const SEVEN_DAYS = 7;
 
-    const today = new Date();
-    const endDate = new Date(new Date().setDate(today.getDate() - SEVEN_DAYS));
-
-    const startDateParam = `${today.getFullYear()}-${today.getMonth() +
-      1}-${today.getDate()}`;
-    const endDateParam = `${endDate.getFullYear()}-${endDate.getMonth() +
-      1}-${endDate.getDate()}`;
+    const startDateParam = dateParam();
+    const endDateParam = dateParam(SEVEN_DAYS);
 
     const response = await nasa.get('/neo/rest/v1/feed', {
       params: {
