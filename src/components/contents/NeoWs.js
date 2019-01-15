@@ -38,6 +38,32 @@ class NeoWs extends Component {
   render() {
     return (
       <div>
+        <h1 className='display-4 mb-1'>Near Earth Object Web Service</h1>
+        <div className='h4 lead mb-4'>
+          RESTful web service for near earth Asteroid information
+        </div>
+        <div>
+          With NeoWs a user can:
+          <ul>
+            <li>
+              FEED: search for Asteroids based on their closest approach date to
+              Earth,
+            </li>
+            <li>
+              LOOKUP: lookup a specific Asteroid with its NASA JPL small body
+              id, and
+            </li>
+            <li>BROWSE: browse the overall data-set.</li>
+          </ul>
+        </div>
+        <div>
+          All the data is from the NASA JPL Asteroid team
+          (http://neo.jpl.nasa.gov/).
+        </div>
+        <div>
+          This API is maintained by SpaceRocks Team: David Greenfield, Arezu
+          Sarvestani, Jason English and Peter Baunach.
+        </div>
         <p>Element count: {this.state.elementCount}</p>
         Prev week:
         <button className='text-primary'>{this.state.links.prev} </button>
