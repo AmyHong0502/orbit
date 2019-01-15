@@ -4,7 +4,79 @@ import nasa from '../../apis/nasa';
 
 class Epic extends Component {
   state = {
-    response: []
+    data: [
+      {
+        identifier: null,
+        attitude_quaternions: [
+          {
+            q0: null,
+            q1: null,
+            q2: null,
+            q3: null
+          }
+        ],
+        caption: null,
+        centroid_coordinates: [
+          {
+            lat: null,
+            lon: null
+          }
+        ],
+        coords: [
+          {
+            attitude_quaternions: {
+              q0: null,
+              q1: null,
+              q2: null,
+              q3: null
+            },
+            centroid_coordinates: {
+              lat: null,
+              lon: null
+            },
+            dscovr_j2000_position: {
+              x: null,
+              y: null,
+              z: null
+            },
+            lunar_j2000_position: {
+              x: null,
+              y: null,
+              z: null
+            },
+            sun_j2000_position: {
+              x: null,
+              y: null,
+              z: null
+            }
+          }
+        ],
+        date: null,
+        dscovr_j2000_position: [
+          {
+            x: null,
+            y: null,
+            z: null
+          }
+        ],
+        image: null,
+        lunar_j2000_position: [
+          {
+            x: null,
+            y: null,
+            z: null
+          }
+        ],
+        sun_j2000_position: [
+          {
+            x: null,
+            y: null,
+            z: null
+          }
+        ],
+        version: '02'
+      }
+    ]
   };
 
   componentDidMount() {
@@ -28,7 +100,7 @@ class Epic extends Component {
   render() {
     return (
       <div>
-        Epic
+        <h1 className='display-4 mb-1'>Earth Polychromatic Imaging Camera</h1>
         <ul>
           <li>natural</li>
           <ul>
