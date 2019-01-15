@@ -39,8 +39,6 @@ class Hss extends Component {
     this.setState({
       data: data
     });
-
-    console.log(this.state.data);
   };
 
   renderList = () =>
