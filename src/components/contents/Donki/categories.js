@@ -1,4 +1,3 @@
-import Home from './Home';
 import Cme from './Cme';
 import CmeAnalysis from './CmeAnalysis';
 import Ips from './Ips';
@@ -6,12 +5,6 @@ import Hss from './Hss';
 import Notifications from './Notifications';
 
 export default [
-  {
-    id: 'home',
-    path: '',
-    name: 'Home',
-    component: Home
-  },
   {
     id: 'cme',
     path: '/cme',
