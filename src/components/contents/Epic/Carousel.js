@@ -40,6 +40,28 @@ class Carousel extends Component {
     )}/png/epic_${matchingGroup[1]}_${matchingGroup[2]}.png`;
   }
 
+  renderCarouselIndicators = () => {
+    let indicators = [];
+
+    for (let i = 0; i < this.props.data.length; i++) {
+      if (i === 0) {
+        indicators.push(
+          <li
+            data-target='#carouselIndicators'
+            data-slide-to='0'
+            className='active'
+          />
+        );
+      } else {
+        indicators.push(
+          <li data-target='#carouselIndicators' data-slide-to={i} />
+        );
+      }
+    }
+
+    return indicators;
+  };
+
   render() {
     if (!this.props.data) {
       return <div>Loading...</div>;
@@ -52,13 +74,7 @@ class Carousel extends Component {
         data-ride='carousel'
       >
         <ol className='carousel-indicators'>
-          <li
-            data-target='#carouselIndicators'
-            data-slide-to='0'
-            className='active'
-          />
-          <li data-target='#carouselIndicators' data-slide-to='1' />
-          <li data-target='#carouselIndicators' data-slide-to='2' />
+          {this.renderCarouselIndicators()}
         </ol>
         <div className='carousel-inner'>{this.renderCarouselItems()}</div>
         <a
