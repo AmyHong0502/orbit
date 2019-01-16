@@ -7,8 +7,6 @@ import NeoWs from '../../contents/NeoWs';
 import Donki from '../../contents/Donki';
 import Epic from '../../contents/Epic';
 import Eonet from '../../contents/Eonet';
-import Earth from '../../contents/Earth';
-import ExoplanetArchive from '../../contents/ExoplanetArchive';
 import GeneLabSearch from '../../contents/GeneLabSearch';
 import Footer from '../Footer';
 
@@ -24,12 +22,6 @@ class Main extends React.Component {
             <Route path='/donki' component={Donki} />
             <Route path='/epic' exact component={Epic} />
             <Route path='/eonet' exact component={Eonet} />
-            <Route path='/earth' exact component={Earth} />
-            <Route
-              path='/exoplanet-archive'
-              exact
-              component={ExoplanetArchive}
-            />
             <Route path='/gene-lab' exact component={GeneLabSearch} />
           </div>
         </main>

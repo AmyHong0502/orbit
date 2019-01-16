@@ -37,18 +37,6 @@ export default [
     urlPath: 'eonet'
   },
   {
-    id: 'Earth',
-    name: 'Earth',
-    description: 'Our Home.',
-    urlPath: 'earth'
-  },
-  {
-    id: 'ExoplanetArchive',
-    name: 'Exoplanet Archive',
-    description: 'Exoplanet Archive',
-    urlPath: 'exoplanet-archive'
-  },
-  {
     id: 'GeneLabSearch',
     name: 'GeneLab Search',
     description: 'GeneLab Search',
