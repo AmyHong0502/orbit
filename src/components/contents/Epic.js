@@ -2,6 +2,7 @@ import { API_KEY } from '../../apis/credentials.json';
 import React, { Component } from 'react';
 import nasa from '../../apis/nasa';
 import ImageCard from './Epic/ImageCard';
+import Carousel from './Epic/Carousel';
 
 class Epic extends Component {
   state = {
@@ -75,7 +76,7 @@ class Epic extends Component {
             z: null
           }
         ],
-        version: '02'
+        version: null
       }
     ]
   };
@@ -117,6 +118,7 @@ class Epic extends Component {
     this.state.data.map(item => {
       return (
         <ImageCard
+          key={item.identifier}
           caption={item.caption}
           imageUrl={this.makeImageString(item.image)}
           date={item.date}
@@ -128,6 +130,7 @@ class Epic extends Component {
     return (
       <div>
         <h1 className='display-4 mb-1'>Earth Polychromatic Imaging Camera</h1>
+        <Carousel data={this.state.data} />
         <div className='row'>{this.renderImageCards()}</div>
         <ul>
           <li>natural</li>
