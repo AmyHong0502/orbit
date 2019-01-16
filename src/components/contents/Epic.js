@@ -1,6 +1,7 @@
 import { API_KEY } from '../../apis/credentials.json';
 import React, { Component } from 'react';
 import nasa from '../../apis/nasa';
+import ImageCard from './Epic/ImageCard';
 
 class Epic extends Component {
   state = {
@@ -91,16 +92,43 @@ class Epic extends Component {
     });
 
     const data = response.data;
-
-    this.setState({
-      response: data
-    });
+    this.setState({ data: data });
   };
+
+  makeImageString(image) {
+    if (!image) {
+      return '';
+    }
+
+    const regex = /^epic_(.*)_(.*)/;
+    const matchingGroup = image.match(regex);
+    const baseImageUrl = 'https://epic.gsfc.nasa.gov/archive/natural';
+
+    return `${baseImageUrl}/${matchingGroup[2].substring(
+      0,
+      4
+    )}/${matchingGroup[2].substring(4, 6)}/${matchingGroup[2].substring(
+      6,
+      8
+    )}/png/epic_${matchingGroup[1]}_${matchingGroup[2]}.png`;
+  }
+
+  renderImageCards = () =>
+    this.state.data.map(item => {
+      return (
+        <ImageCard
+          caption={item.caption}
+          imageUrl={this.makeImageString(item.image)}
+          date={item.date}
+        />
+      );
+    });
 
   render() {
     return (
       <div>
         <h1 className='display-4 mb-1'>Earth Polychromatic Imaging Camera</h1>
+        <div className='row'>{this.renderImageCards()}</div>
         <ul>
           <li>natural</li>
           <ul>
