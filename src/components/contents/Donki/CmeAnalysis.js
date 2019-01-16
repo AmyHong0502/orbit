@@ -2,6 +2,7 @@ import { API_KEY } from '../../../apis/credentials';
 import React, { Component } from 'react';
 import RowItem from './RowItem';
 import nasa from '../../../apis/nasa';
+import Subtitle from './Subtitle';
 
 class CmeAnalysis extends Component {
   state = {
@@ -58,7 +59,7 @@ class CmeAnalysis extends Component {
   render() {
     return (
       <div>
-        <h1 className='display-4'>Coronal Mass Ejection Analysis</h1>
+        <Subtitle text={'Coronal Mass Ejection Analysis'} />
         {this.renderList()}
       </div>
     );

@@ -2,6 +2,7 @@ import { API_KEY } from '../../../apis/credentials';
 import React, { Component } from 'react';
 import RowItem from './RowItem';
 import nasa from '../../../apis/nasa';
+import Subtitle from './Subtitle';
 
 class Ips extends Component {
   state = {
@@ -52,7 +53,7 @@ class Ips extends Component {
   render() {
     return (
       <div>
-        <h1 className='display-4 mb-1'>Interplanetary Shock</h1>
+        <Subtitle text={'Interplanetary Shock'} />
         {this.renderList()}
       </div>
     );

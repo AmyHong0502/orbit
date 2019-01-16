@@ -2,6 +2,7 @@ import { API_KEY } from '../../../apis/credentials';
 import React, { Component } from 'react';
 import RowItem from './RowItem';
 import nasa from '../../../apis/nasa';
+import Subtitle from './Subtitle';
 
 class Hss extends Component {
   state = {
@@ -56,7 +57,7 @@ class Hss extends Component {
   render() {
     return (
       <div>
-        <h1 className='display-4 mb-1'>Hight Speed Stream</h1>
+        <Subtitle text={'Hight Speed Stream'} />
         {this.renderList()}
       </div>
     );
