@@ -1,8 +1,8 @@
 import { API_KEY } from '../../../apis/credentials';
 import React, { Component } from 'react';
+import Subtitle from './Subtitle';
 import RowItem from './RowItem';
 import nasa from '../../../apis/nasa';
-import Subtitle from './Subtitle';
 
 class Ips extends Component {
   state = {
