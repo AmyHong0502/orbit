@@ -21,7 +21,7 @@ class Main extends React.Component {
             <Route path='/neows' exact component={NeoWs} />
             <Route path='/donki' component={Donki} />
             <Route path='/epic' exact component={Epic} />
-            <Route path='/eonet' exact component={Eonet} />
+            <Route path='/eonet' component={Eonet} />
             <Route path='/gene-lab' exact component={GeneLabSearch} />
           </div>
         </main>
